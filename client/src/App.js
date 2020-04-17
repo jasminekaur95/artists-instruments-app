@@ -11,7 +11,6 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import AddArtist from "./components/forms/AddArtist";
 import AddInstrument from "./components/forms/AddInstrument";
-import Artist from "./components/listItems/Artist";
 import Artists from "./components/lists/Artists";
 import Title from "./components/layout/Title";
 
@@ -29,6 +28,11 @@ const App = () => (
             <Title />
             <AddArtist />
             <AddInstrument />
+            <Artists />
+          </Container>
+        </Route>
+        <Route path="/artists/:id">
+          <Container className="App">
             <Artists />
           </Container>
         </Route>
